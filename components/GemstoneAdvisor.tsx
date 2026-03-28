@@ -140,11 +140,10 @@ export default function GemstoneAdvisor() {
   const filteredItems = selectedCategory === 'gemstones' 
     ? gemstones.filter(item => 
         item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.meaning.toLowerCase().includes(searchTerm.toLowerCase())
+        item.meaning?.toLowerCase().includes(searchTerm.toLowerCase())
       )
     : metals.filter(item => 
-        item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.meaning?.toLowerCase().includes(searchTerm.toLowerCase())
+        item.name.toLowerCase().includes(searchTerm.toLowerCase())
       );
 
   return (
@@ -224,7 +223,7 @@ export default function GemstoneAdvisor() {
                         {item.name}
                       </h3>
                       <p className="font-poppins text-sm text-gray-600 mb-3 line-clamp-2">
-                        {item.meaning || `${item.color} • ${item.durability}`}
+                        {selectedCategory === 'gemstones' ? (item as Gemstone).meaning : `${(item as Metal).color} • ${(item as Metal).durability}`}
                       </p>
                       <div className="flex justify-between items-center">
                         <span className="font-poppins font-semibold text-[#D4AF37]">

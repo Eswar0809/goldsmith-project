@@ -47,7 +47,7 @@ export default function PersonalizedDashboard() {
       name: 'Vintage Wedding Band',
       description: 'Antique style with filigree details',
       image: '💫',
-      price: ringPrices.vintageWedding,
+      price: ringPrices.royalWedding,
       createdAt: '2024-01-10'
     }
   ];

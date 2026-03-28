@@ -253,7 +253,7 @@ export default function VirtualGiftRecommendation() {
               {recommendedGifts.length > 0 && (
                 <div>
                   <h3 className="font-playfair text-2xl font-semibold text-gray-800 mb-6">
-                    Perfect Matches for Your {selectedRing.name}
+                    Perfect Matches for Your {selectedRing?.name}
                   </h3>
                   
                   <div className="grid md:grid-cols-3 gap-6 mb-8">
